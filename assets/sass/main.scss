@@ -1,0 +1,113 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+   background: #19202a;
+}
+header{
+  position: absolute;
+  z-index: 3;
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .logo{
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    img{
+      width: 100%;
+    }
+  }
+  nav{
+    align-self: center;
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 0 10px;
+    }
+  }
+}
+
+#top-section{
+  height: 100vh;
+  position: relative;
+
+  .bluredbg{
+    background-image:  linear-gradient(135deg, rgba(8,86,105, .6) 0%,  rgba(73,165,191,.6) 100%), url("https://images.pexels.com/photos/905874/pexels-photo-905874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    height:100vh;
+    width: 100%;
+
+    position: absolute;
+    z-index: 1;
+
+  }
+
+
+}
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+
+
+}
+#bio{
+  height: 100vh;
+  background: black, linear-gradient(135deg, rgba(8,86,105, .6) 0%,  rgba(73,165,191,.6) 100%);
+  position: relative;
+  z-index: 3;
+  padding: 100px 0;
+  .container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  p{
+    width: 50%;
+    color: white;
+    line-height: 1.5;
+    font-size: .9rem;
+    padding: 0 50px;
+  }
+  .logo-centered{
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor:  pointer;
+      margin-left: 150px;
+    }
+    img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+  }
+}
